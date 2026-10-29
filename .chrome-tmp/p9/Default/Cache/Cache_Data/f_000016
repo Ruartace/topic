@@ -1,0 +1,342 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/flow/PandaMark.vue");/* Injection by vite-plugin-vue-inspector Start */
+import { createElementVNode as __createElementVNode,createElementBlock as __createElementBlock } from "/node_modules/.vite/deps/vue.js?v=c1936a41"
+function _interopVNode(vnode) {
+  if (vnode && vnode.props && 'data-v-inspector' in vnode.props) {
+    const data = vnode.props['data-v-inspector']
+    delete vnode.props['data-v-inspector']
+    Object.defineProperty(vnode.props, '__v_inspector', { value: data, enumerable: false })
+  }
+  return vnode
+}
+function _createElementVNode(...args) { return _interopVNode(__createElementVNode(...args)) }
+function _createElementBlock(...args) { return _interopVNode(__createElementBlock(...args)) }
+/* Injection by vite-plugin-vue-inspector End */
+import { defineComponent as _defineComponent } from "/node_modules/.vite/deps/vue.js?v=c1936a41";
+const _sfc_main = /*@__PURE__*/ _defineComponent({
+	__name: "PandaMark",
+	props: { size: {
+		type: Number,
+		required: false,
+		default: 132
+	} },
+	setup(__props, { expose: __expose }) {
+		__expose();
+		/**
+		* 熊猫吉祥物 · 熊猫健康科普
+		*
+		* 纯矢量, 扁平无渐变: 墨黑耳廓与眼罩 + 竹纸白面部 + 一点腮红。
+		* 竹叶在右下角轻微摇动, 作为品牌记忆点。
+		*/
+		const props = __props;
+		const __returned__ = { props };
+		Object.defineProperty(__returned__, "__isScriptSetup", {
+			enumerable: false,
+			value: true
+		});
+		return __returned__;
+	}
+});
+import { createCommentVNode as _createCommentVNode,  openBlock as _openBlock,  } from "/node_modules/.vite/deps/vue.js?v=c1936a41";
+const _hoisted_1 = ["width", "height"];
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return _openBlock(), _createElementBlock("svg", {
+		class: "panda",
+		width: $setup.props.size,
+		height: $setup.props.size * 1.08,
+		viewBox: "0 0 120 130",
+		fill: "none",
+		"aria-hidden": "true",
+		"data-v-inspector": "src/components/flow/PandaMark.vue:12:3"
+	}, [
+		_createCommentVNode(" 竹叶 (右下角装饰, 呼吸式摇动) "),
+		_cache[0] || (_cache[0] = _createElementVNode(
+			"g",
+			{
+				class: "panda__leaf",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:21:5"
+			},
+			[_createElementVNode("path", {
+				d: "M92 104c6-14 18-22 30-24 0 14-8 26-20 30-4 1-8 0-10-6Z",
+				fill: "#b3c9b6",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:22:7"
+			}), _createElementVNode("path", {
+				d: "M96 108c8-8 16-13 24-16",
+				stroke: "#8aa78f",
+				"stroke-width": "1.6",
+				"stroke-linecap": "round",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:23:7"
+			})],
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 耳朵 "),
+		_cache[1] || (_cache[1] = _createElementVNode(
+			"circle",
+			{
+				cx: "27",
+				cy: "26",
+				r: "15",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:27:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[2] || (_cache[2] = _createElementVNode(
+			"circle",
+			{
+				cx: "93",
+				cy: "26",
+				r: "15",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:28:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[3] || (_cache[3] = _createElementVNode(
+			"circle",
+			{
+				cx: "27",
+				cy: "26",
+				r: "7",
+				fill: "#3f463f",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:29:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[4] || (_cache[4] = _createElementVNode(
+			"circle",
+			{
+				cx: "93",
+				cy: "26",
+				r: "7",
+				fill: "#3f463f",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:30:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 面部 "),
+		_cache[5] || (_cache[5] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "60",
+				cy: "62",
+				rx: "44",
+				ry: "42",
+				fill: "#ffffff",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:33:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[6] || (_cache[6] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "60",
+				cy: "62",
+				rx: "44",
+				ry: "42",
+				stroke: "#2a2f2b",
+				"stroke-width": "2",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:34:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 眼罩 "),
+		_cache[7] || (_cache[7] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "41",
+				cy: "56",
+				rx: "12",
+				ry: "14",
+				fill: "#2a2f2b",
+				transform: "rotate(-12 41 56)",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:37:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[8] || (_cache[8] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "79",
+				cy: "56",
+				rx: "12",
+				ry: "14",
+				fill: "#2a2f2b",
+				transform: "rotate(12 79 56)",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:38:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 眼神 "),
+		_cache[9] || (_cache[9] = _createElementVNode(
+			"circle",
+			{
+				cx: "42.5",
+				cy: "54",
+				r: "4",
+				fill: "#ffffff",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:41:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[10] || (_cache[10] = _createElementVNode(
+			"circle",
+			{
+				cx: "77.5",
+				cy: "54",
+				r: "4",
+				fill: "#ffffff",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:42:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[11] || (_cache[11] = _createElementVNode(
+			"circle",
+			{
+				cx: "44",
+				cy: "55.4",
+				r: "2.1",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:43:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[12] || (_cache[12] = _createElementVNode(
+			"circle",
+			{
+				cx: "76",
+				cy: "55.4",
+				r: "2.1",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:44:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 腮红 "),
+		_cache[13] || (_cache[13] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "27",
+				cy: "74",
+				rx: "8",
+				ry: "5",
+				fill: "#e8c9c2",
+				opacity: "0.55",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:47:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[14] || (_cache[14] = _createElementVNode(
+			"ellipse",
+			{
+				cx: "93",
+				cy: "74",
+				rx: "8",
+				ry: "5",
+				fill: "#e8c9c2",
+				opacity: "0.55",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:48:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 鼻与嘴 "),
+		_cache[15] || (_cache[15] = _createElementVNode(
+			"path",
+			{
+				d: "M60 72c-4 0-7 2.6-7 5 0 2.6 3 4 7 4s7-1.4 7-4c0-2.4-3-5-7-5Z",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:51:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[16] || (_cache[16] = _createElementVNode(
+			"path",
+			{
+				d: "M60 81v3.5M60 84.5c-1.6 3.4-5.6 3.4-7.6.6M60 84.5c1.6 3.4 5.6 3.4 7.6.6",
+				stroke: "#2a2f2b",
+				"stroke-width": "2.2",
+				"stroke-linecap": "round",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:55:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_createCommentVNode(" 身体 "),
+		_cache[17] || (_cache[17] = _createElementVNode(
+			"path",
+			{
+				d: "M34 100c0-9 11-16 26-16s26 7 26 16v6H34v-6Z",
+				fill: "#2a2f2b",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:63:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		)),
+		_cache[18] || (_cache[18] = _createElementVNode(
+			"path",
+			{
+				d: "M46 100c2-6 7-9 14-9s12 3 14 9H46Z",
+				fill: "#ffffff",
+				"data-v-inspector": "src/components/flow/PandaMark.vue:64:5"
+			},
+			null,
+			-1
+			/* CACHED */
+		))
+	], 8, _hoisted_1);
+}
+import "/src/components/flow/PandaMark.vue?vue&type=style&index=0&scoped=f4f0313c&lang.css";
+_sfc_main.__hmrId = "f4f0313c";
+typeof __VUE_HMR_RUNTIME__ !== "undefined" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);
+import.meta.hot.on("file-changed", ({ file }) => {
+	__VUE_HMR_RUNTIME__.CHANGED_FILE = file;
+});
+import.meta.hot.accept((mod) => {
+	if (!mod) return;
+	const { default: updated, _rerender_only } = mod;
+	if (_rerender_only) {
+		__VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);
+	} else {
+		__VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);
+	}
+});
+import _export_sfc from "/@id/__x00__plugin-vue:export-helper";
+export default /*#__PURE__*/ _export_sfc(_sfc_main, [
+	["render", _sfc_render],
+	["__scopeId", "data-v-f4f0313c"],
+	["__file", "E:/Desktop/huaxicode/hxproject/topic/src/components/flow/PandaMark.vue"]
+]);
+
+//# sourceMappingURL=data:application/json;base64,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c3QiOltdLCJzb3VyY2VzIjpbIlBhbmRhTWFyay52dWUiXSwic291cmNlc0NvbnRlbnQiOlsiPHNjcmlwdCBzZXR1cCBsYW5nPVwidHNcIj5cbi8qKlxuICog54aK54yr5ZCJ56Wl54mpIMK3IOeGiueMq+WBpeW6t+enkeaZrlxuICpcbiAqIOe6r+efoumHjywg5omB5bmz5peg5riQ5Y+YOiDloqjpu5HogLPlu5PkuI7nnLznvakgKyDnq7nnurjnmb3pnaLpg6ggKyDkuIDngrnoha7nuqLjgIJcbiAqIOerueWPtuWcqOWPs+S4i+inkui9u+W+ruaRh+WKqCwg5L2c5Li65ZOB54mM6K6w5b+G54K544CCXG4gKi9cbmNvbnN0IHByb3BzID0gd2l0aERlZmF1bHRzKGRlZmluZVByb3BzPHsgc2l6ZT86IG51bWJlciB9PigpLCB7IHNpemU6IDEzMiB9KVxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPHN2Z1xuICAgIGNsYXNzPVwicGFuZGFcIlxuICAgIDp3aWR0aD1cInByb3BzLnNpemVcIlxuICAgIDpoZWlnaHQ9XCJwcm9wcy5zaXplICogMS4wOFwiXG4gICAgdmlld0JveD1cIjAgMCAxMjAgMTMwXCJcbiAgICBmaWxsPVwibm9uZVwiXG4gICAgYXJpYS1oaWRkZW49XCJ0cnVlXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZToxMjozXCJcbiAgPlxuICAgIDwhLS0g56u55Y+2ICjlj7PkuIvop5Loo4XppbAsIOWRvOWQuOW8j+aRh+WKqCkgLS0+XG4gICAgPGcgY2xhc3M9XCJwYW5kYV9fbGVhZlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6MjE6NVwiPlxuICAgICAgPHBhdGggZD1cIk05MiAxMDRjNi0xNCAxOC0yMiAzMC0yNCAwIDE0LTggMjYtMjAgMzAtNCAxLTggMC0xMC02WlwiIGZpbGw9XCIjYjNjOWI2XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZToyMjo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNOTYgMTA4YzgtOCAxNi0xMyAyNC0xNlwiIHN0cm9rZT1cIiM4YWE3OGZcIiBzdHJva2Utd2lkdGg9XCIxLjZcIiBzdHJva2UtbGluZWNhcD1cInJvdW5kXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZToyMzo3XCIgLz5cbiAgICA8L2c+XG5cbiAgICA8IS0tIOiAs+actSAtLT5cbiAgICA8Y2lyY2xlIGN4PVwiMjdcIiBjeT1cIjI2XCIgcj1cIjE1XCIgZmlsbD1cIiMyYTJmMmJcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjI3OjVcIiAvPlxuICAgIDxjaXJjbGUgY3g9XCI5M1wiIGN5PVwiMjZcIiByPVwiMTVcIiBmaWxsPVwiIzJhMmYyYlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6Mjg6NVwiIC8+XG4gICAgPGNpcmNsZSBjeD1cIjI3XCIgY3k9XCIyNlwiIHI9XCI3XCIgZmlsbD1cIiMzZjQ2M2ZcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjI5OjVcIiAvPlxuICAgIDxjaXJjbGUgY3g9XCI5M1wiIGN5PVwiMjZcIiByPVwiN1wiIGZpbGw9XCIjM2Y0NjNmXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTozMDo1XCIgLz5cblxuICAgIDwhLS0g6Z2i6YOoIC0tPlxuICAgIDxlbGxpcHNlIGN4PVwiNjBcIiBjeT1cIjYyXCIgcng9XCI0NFwiIHJ5PVwiNDJcIiBmaWxsPVwiI2ZmZmZmZlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6MzM6NVwiIC8+XG4gICAgPGVsbGlwc2UgY3g9XCI2MFwiIGN5PVwiNjJcIiByeD1cIjQ0XCIgcnk9XCI0MlwiIHN0cm9rZT1cIiMyYTJmMmJcIiBzdHJva2Utd2lkdGg9XCIyXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTozNDo1XCIgLz5cblxuICAgIDwhLS0g55y8572pIC0tPlxuICAgIDxlbGxpcHNlIGN4PVwiNDFcIiBjeT1cIjU2XCIgcng9XCIxMlwiIHJ5PVwiMTRcIiBmaWxsPVwiIzJhMmYyYlwiIHRyYW5zZm9ybT1cInJvdGF0ZSgtMTIgNDEgNTYpXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTozNzo1XCIgLz5cbiAgICA8ZWxsaXBzZSBjeD1cIjc5XCIgY3k9XCI1NlwiIHJ4PVwiMTJcIiByeT1cIjE0XCIgZmlsbD1cIiMyYTJmMmJcIiB0cmFuc2Zvcm09XCJyb3RhdGUoMTIgNzkgNTYpXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTozODo1XCIgLz5cblxuICAgIDwhLS0g55y856WeIC0tPlxuICAgIDxjaXJjbGUgY3g9XCI0Mi41XCIgY3k9XCI1NFwiIHI9XCI0XCIgZmlsbD1cIiNmZmZmZmZcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjQxOjVcIiAvPlxuICAgIDxjaXJjbGUgY3g9XCI3Ny41XCIgY3k9XCI1NFwiIHI9XCI0XCIgZmlsbD1cIiNmZmZmZmZcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjQyOjVcIiAvPlxuICAgIDxjaXJjbGUgY3g9XCI0NFwiIGN5PVwiNTUuNFwiIHI9XCIyLjFcIiBmaWxsPVwiIzJhMmYyYlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6NDM6NVwiIC8+XG4gICAgPGNpcmNsZSBjeD1cIjc2XCIgY3k9XCI1NS40XCIgcj1cIjIuMVwiIGZpbGw9XCIjMmEyZjJiXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTo0NDo1XCIgLz5cblxuICAgIDwhLS0g6IWu57qiIC0tPlxuICAgIDxlbGxpcHNlIGN4PVwiMjdcIiBjeT1cIjc0XCIgcng9XCI4XCIgcnk9XCI1XCIgZmlsbD1cIiNlOGM5YzJcIiBvcGFjaXR5PVwiMC41NVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6NDc6NVwiIC8+XG4gICAgPGVsbGlwc2UgY3g9XCI5M1wiIGN5PVwiNzRcIiByeD1cIjhcIiByeT1cIjVcIiBmaWxsPVwiI2U4YzljMlwiIG9wYWNpdHk9XCIwLjU1XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTo0ODo1XCIgLz5cblxuICAgIDwhLS0g6by75LiO5Zi0IC0tPlxuICAgIDxwYXRoXG4gICAgICBkPVwiTTYwIDcyYy00IDAtNyAyLjYtNyA1IDAgMi42IDMgNCA3IDRzNy0xLjQgNy00YzAtMi40LTMtNS03LTVaXCJcbiAgICAgIGZpbGw9XCIjMmEyZjJiXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL2Zsb3cvUGFuZGFNYXJrLnZ1ZTo1MTo1XCJcbiAgICAvPlxuICAgIDxwYXRoXG4gICAgICBkPVwiTTYwIDgxdjMuNU02MCA4NC41Yy0xLjYgMy40LTUuNiAzLjQtNy42LjZNNjAgODQuNWMxLjYgMy40IDUuNiAzLjQgNy42LjZcIlxuICAgICAgc3Ryb2tlPVwiIzJhMmYyYlwiXG4gICAgICBzdHJva2Utd2lkdGg9XCIyLjJcIlxuICAgICAgc3Ryb2tlLWxpbmVjYXA9XCJyb3VuZFwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9mbG93L1BhbmRhTWFyay52dWU6NTU6NVwiXG4gICAgLz5cblxuICAgIDwhLS0g6Lqr5L2TIC0tPlxuICAgIDxwYXRoIGQ9XCJNMzQgMTAwYzAtOSAxMS0xNiAyNi0xNnMyNiA3IDI2IDE2djZIMzR2LTZaXCIgZmlsbD1cIiMyYTJmMmJcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjYzOjVcIiAvPlxuICAgIDxwYXRoIGQ9XCJNNDYgMTAwYzItNiA3LTkgMTQtOXMxMiAzIDE0IDlINDZaXCIgZmlsbD1cIiNmZmZmZmZcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlOjY0OjVcIiAvPlxuICA8L3N2Zz5cbjwvdGVtcGxhdGU+XG5cbjxzdHlsZSBzY29wZWQ+XG4ucGFuZGEge1xuICBkaXNwbGF5OiBibG9jaztcbiAgb3ZlcmZsb3c6IHZpc2libGU7XG59XG5cbi8qIOerueWPtue8k+aFouaRh+WKqCwg5bmF5bqm5p6B5bCPLCDlj6rlnKjkvZnlhYnph4zooqvmhJ/nn6UgKi9cbi5wYW5kYV9fbGVhZiB7XG4gIHRyYW5zZm9ybS1vcmlnaW46IDk2cHggMTA2cHg7XG4gIGFuaW1hdGlvbjogbGVhZi1zd2F5IDYuNXMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XG59XG5cbkBrZXlmcmFtZXMgbGVhZi1zd2F5IHtcbiAgMCUsXG4gIDEwMCUge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKC0zZGVnKTtcbiAgfVxuICA1MCUge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDRkZWcpO1xuICB9XG59XG5cbkBtZWRpYSAocHJlZmVycy1yZWR1Y2VkLW1vdGlvbjogcmVkdWNlKSB7XG4gIC5wYW5kYV9fbGVhZiB7XG4gICAgYW5pbWF0aW9uOiBub25lO1xuICB9XG59XG48L3N0eWxlPlxuIl0sImZpbGUiOiJFOi9EZXNrdG9wL2h1YXhpY29kZS9oeHByb2plY3QvdG9waWMvc3JjL2NvbXBvbmVudHMvZmxvdy9QYW5kYU1hcmsudnVlIn0=

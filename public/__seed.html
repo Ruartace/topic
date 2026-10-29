@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>seed</title>
+  </head>
+  <body>
+    <script>
+      const q = new URLSearchParams(location.search)
+      const stage = q.get('stage') || 'pre'
+      const key = 'hx.survey.session.v1'
+      const base = {
+        id: 'seed',
+        pre: { q1: 'b', q2: 'a', q3: 'b' },
+        post: { q1: 'b', q2: 'c', q3: 'b', q4: 'c' },
+        preDone: false,
+        postDone: false,
+        submitted: false,
+        prizeId: null,
+        prizeAt: 0,
+        startedAt: Date.now(),
+      }
+      if (stage === 'pre') {
+        base.pre = { q1: 'b', q2: 'a' }
+      }
+      if (stage === 'video') base.preDone = true
+      if (stage === 'post') {
+        base.preDone = true
+        base.post = { q1: 'b' }
+      }
+      if (stage === 'review') {
+        base.preDone = true
+        base.postDone = true
+        base.submitted = true
+      }
+      if (stage === 'lottery') {
+        base.preDone = true
+        base.postDone = true
+        base.submitted = true
+        base.prizeId = 'tea'
+        base.prizeAt = Date.now()
+      }
+      localStorage.setItem(key, JSON.stringify(base))
+      location.replace('/')
+    </script>
+  </body>
+</html>

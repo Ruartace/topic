@@ -1,0 +1,109 @@
+/* ============================================================
+   医疗科普小测 · 熊猫 × 翠竹 设计令牌
+   风格：简约清新 / 大留白 / 细发丝描边 / 柔和投影
+   规则：
+   1) 层次靠「细描边 + 极轻投影 + 表面色差」表达，不用粗重边框
+   2) 单一浅色主题，所有前景/背景组合均已校验对比度
+   3) 配色 = 熊猫墨黑 + 竹纸白 + 低饱和翠竹绿 + 少量陈竹黄
+   4) 标题用思源宋体（衬线）撑高级感，正文用思源黑体
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap');
+
+:root {
+  /* ---- 表面层 (竹纸质感, 全部浅色) ---- */
+  --c-bg: #f6f6f0; /* 页面底色 · 竹纸米 */
+  --c-bg-2: #eef0e6; /* 背景渐层 */
+  --c-surface: #ffffff; /* 卡片 · 熊猫白 */
+  --c-surface-2: #fafaf5; /* 次级色块 / 轨道 */
+  --c-tint: #e8f0e6; /* 翠竹浅染 (chip / 选中底) */
+  --c-tint-2: #f6f0e1; /* 陈竹黄浅染 */
+
+  /* ---- 墨色层 (只落在浅色底上) ---- */
+  --c-ink: #262b26; /* 标题, 对白底 14.2:1 */
+  --c-ink-2: #555d56; /* 正文次级, 对比度 6.8:1 */
+  --c-ink-3: #858d86; /* 辅助说明, 仅用于 ≥16px 或图标 */
+
+  /* ---- 翠竹绿 (主色, 低饱和) ---- */
+  --c-primary: #476b50; /* 白字对比 6.1:1 */
+  --c-primary-strong: #33503b; /* 深主色, 小字与按下态 */
+  --c-primary-soft: #e8f0e6;
+  --c-primary-line: #c2d6c4; /* 描边 */
+
+  /* ---- 陈竹黄 (唯一暖色, 克制用于奖品/奖励) ---- */
+  --c-accent: #8a6a2c; /* 白字对比 5.1:1 */
+  --c-accent-soft: #f7f1e0;
+  --c-accent-line: #ddc99c;
+
+  /* ---- 语义色 ---- */
+  --c-ok: #3b7450; /* 正确, 白字对比 5.4:1 */
+  --c-ok-soft: #e6f0e8;
+  --c-ok-line: #b2d0bb;
+  --c-bad: #a24c41; /* 错误, 白字对比 5.9:1 */
+  --c-bad-soft: #f8ece9;
+  --c-bad-line: #e2bcb4;
+
+  /* ---- 描边 / 分隔线 ---- */
+  --c-border: #e5e6dc; /* 发丝描边 */
+  --c-border-strong: #cfd2c4;
+  --c-divider: #edeedf;
+
+  /* ---- 投影: 极轻, 只用于「浮起」层级 ---- */
+  --sh-1: 0 1px 2px rgba(38, 43, 38, 0.04);
+  --sh-2: 0 2px 8px rgba(38, 43, 38, 0.05), 0 10px 28px rgba(38, 43, 38, 0.05);
+  --sh-3: 0 4px 14px rgba(38, 43, 38, 0.07), 0 24px 60px rgba(38, 43, 38, 0.09);
+
+  /* ---- 间距节奏: 4 / 8 基准 ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* ---- 圆角 ---- */
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --r-pill: 999px;
+
+  /* ---- 字体 ---- */
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system,
+    'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+
+  /* ---- 触控最小尺寸 ---- */
+  --tap-min: 48px;
+
+  /* ---- 动效 ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.32, 0.64, 1);
+  --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 460ms;
+  --dur-cinema: 700ms; /* 场景切换 */
+
+  /* ---- 布局 ---- */
+  --page-max: 720px; /* 平板内容最大宽度 */
+  --gutter: 20px; /* 手机左右留白 */
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+  }
+}
+
+/* 降低动态效果: 全部时长归零, 由各组件自行关掉动画 */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+    --dur-cinema: 0ms;
+  }
+}

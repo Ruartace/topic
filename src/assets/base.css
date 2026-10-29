@@ -1,0 +1,59 @@
+@import './theme.css';
+
+/* ============================================================
+   全局基础样式 · 简约清新 / 单一浅色主题
+   不提供深色模式, 避免深浅配色交叉造成的视觉割裂
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--c-ink);
+  background: var(--c-bg);
+  line-height: 1.6;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: contain;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--c-primary-soft);
+  color: var(--c-ink);
+}
+
+/* 关闭数字跳动, 让分数与时间显示稳定 */
+output,
+time {
+  font-variant-numeric: tabular-nums;
+}

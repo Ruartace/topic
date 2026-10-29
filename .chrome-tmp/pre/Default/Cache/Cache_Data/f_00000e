@@ -1,0 +1,586 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/AppIcon.vue");/* Injection by vite-plugin-vue-inspector Start */
+import { createElementBlock as __createElementBlock,createElementVNode as __createElementVNode } from "/node_modules/.vite/deps/vue.js?v=c1936a41"
+function _interopVNode(vnode) {
+  if (vnode && vnode.props && 'data-v-inspector' in vnode.props) {
+    const data = vnode.props['data-v-inspector']
+    delete vnode.props['data-v-inspector']
+    Object.defineProperty(vnode.props, '__v_inspector', { value: data, enumerable: false })
+  }
+  return vnode
+}
+function _createElementBlock(...args) { return _interopVNode(__createElementBlock(...args)) }
+function _createElementVNode(...args) { return _interopVNode(__createElementVNode(...args)) }
+/* Injection by vite-plugin-vue-inspector End */
+import { defineComponent as _defineComponent } from "/node_modules/.vite/deps/vue.js?v=c1936a41";
+const _sfc_main = /*@__PURE__*/ _defineComponent({
+	__name: "AppIcon",
+	props: {
+		name: {
+			type: String,
+			required: true
+		},
+		size: {
+			type: Number,
+			required: false,
+			default: 24
+		},
+		decorative: {
+			type: Boolean,
+			required: false,
+			default: false
+		}
+	},
+	setup(__props, { expose: __expose }) {
+		__expose();
+		/**
+		* 统一线性图标集 (24x24, stroke 1.75)
+		* 全部内联 SVG, 不使用 emoji, 保持跨端一致可缩放
+		*/
+		const props = __props;
+		const __returned__ = { props };
+		Object.defineProperty(__returned__, "__isScriptSetup", {
+			enumerable: false,
+			value: true
+		});
+		return __returned__;
+	}
+});
+import { renderSlot as _renderSlot, openBlock as _openBlock,  createCommentVNode as _createCommentVNode,  Fragment as _Fragment, createStaticVNode as _createStaticVNode } from "/node_modules/.vite/deps/vue.js?v=c1936a41";
+const _hoisted_1 = [
+	"width",
+	"height",
+	"aria-hidden",
+	"role"
+];
+const _hoisted_2 = {
+	key: 0,
+	"data-v-inspector": "src/components/AppIcon.vue:58:5"
+};
+const _hoisted_3 = {
+	key: 6,
+	d: "m4.5 12.5 5 5 10-11",
+	"data-v-inspector": "src/components/AppIcon.vue:86:7"
+};
+const _hoisted_4 = {
+	key: 7,
+	d: "M6 6l12 12M18 6 6 18",
+	"data-v-inspector": "src/components/AppIcon.vue:90:7"
+};
+const _hoisted_5 = {
+	key: 8,
+	d: "m9 5 7 7-7 7",
+	"data-v-inspector": "src/components/AppIcon.vue:94:7"
+};
+const _hoisted_6 = {
+	key: 9,
+	d: "m15 5-7 7 7 7",
+	"data-v-inspector": "src/components/AppIcon.vue:98:7"
+};
+const _hoisted_7 = {
+	key: 10,
+	d: "m5 9 7 7 7-7",
+	"data-v-inspector": "src/components/AppIcon.vue:102:7"
+};
+const _hoisted_8 = {
+	key: 11,
+	d: "M12 2.5s5.5 4.2 5.5 9.2A5.5 5.5 0 0 1 12 21.5a5.5 5.5 0 0 1-5.5-5.8c0-2.2 1.2-3.6 2.2-4.6.3 1.2 1.1 2 1.9 2 .5-3 1-4.5 1.4-6.6Z",
+	"data-v-inspector": "src/components/AppIcon.vue:106:7"
+};
+const _hoisted_9 = {
+	key: 14,
+	d: "M8 5.5v13l10.5-6.5L8 5.5Z",
+	fill: "currentColor",
+	stroke: "none",
+	"data-v-inspector": "src/components/AppIcon.vue:121:7"
+};
+const _hoisted_10 = {
+	key: 16,
+	d: "M9 4.5H4.5V9M15 4.5h4.5V9M9 19.5H4.5V15M15 19.5h4.5V15",
+	"data-v-inspector": "src/components/AppIcon.vue:130:7"
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return _openBlock(), _createElementBlock("svg", {
+		class: "icon",
+		width: $setup.props.size,
+		height: $setup.props.size,
+		viewBox: "0 0 24 24",
+		fill: "none",
+		stroke: "currentColor",
+		"stroke-width": "1.75",
+		"stroke-linecap": "round",
+		"stroke-linejoin": "round",
+		"aria-hidden": $setup.props.decorative ? "true" : undefined,
+		role: $setup.props.decorative ? undefined : "img",
+		"data-v-inspector": "src/components/AppIcon.vue:45:3"
+	}, [!$setup.props.decorative ? (_openBlock(), _createElementBlock("title", _hoisted_2, [_renderSlot(_ctx.$slots, "default", {}, undefined, true)])) : _createCommentVNode("v-if", true), $setup.props.name === "heart" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 1 },
+		[_cache[0] || (_cache[0] = _createElementVNode(
+			"path",
+			{
+				d: "M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21.5l8.8-8.8a5 5 0 0 0 0-7.1Z",
+				"data-v-inspector": "src/components/AppIcon.vue:61:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[1] || (_cache[1] = _createElementVNode(
+			"path",
+			{
+				d: "M3.5 12.5h3l1.5-3 2 5 1.8-3.5 1.2 1.5h4",
+				"data-v-inspector": "src/components/AppIcon.vue:62:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "pill" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 2 },
+		[_cache[2] || (_cache[2] = _createElementVNode(
+			"rect",
+			{
+				x: "2.6",
+				y: "8.4",
+				width: "18.8",
+				height: "7.2",
+				rx: "3.6",
+				transform: "rotate(-45 12 12)",
+				"data-v-inspector": "src/components/AppIcon.vue:66:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[3] || (_cache[3] = _createElementVNode(
+			"path",
+			{
+				d: "M8.5 8.5 15.5 15.5",
+				"data-v-inspector": "src/components/AppIcon.vue:67:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "leaf" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 3 },
+		[_cache[4] || (_cache[4] = _createElementVNode(
+			"path",
+			{
+				d: "M4 20c0-8 5-14 16-15 0 10-5.5 15-11 15-2.5 0-5-1-5-1Z",
+				"data-v-inspector": "src/components/AppIcon.vue:71:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[5] || (_cache[5] = _createElementVNode(
+			"path",
+			{
+				d: "M9 15c2.5-3.5 5.5-5.5 9-7",
+				"data-v-inspector": "src/components/AppIcon.vue:72:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "brain" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 4 },
+		[_cache[6] || (_cache[6] = _createElementVNode(
+			"path",
+			{
+				d: "M9.5 4.5A2.5 2.5 0 0 0 7 7v.4A2.6 2.6 0 0 0 4.5 10c0 .9.4 1.7 1 2.2A2.6 2.6 0 0 0 4.6 15c.2.9.8 1.7 1.6 2.1A2.5 2.5 0 0 0 9.5 20a2 2 0 0 0 2-2V6.5a2 2 0 0 0-2-2Z",
+				"data-v-inspector": "src/components/AppIcon.vue:76:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[7] || (_cache[7] = _createElementVNode(
+			"path",
+			{
+				d: "M14.5 4.5A2.5 2.5 0 0 1 17 7v.4A2.6 2.6 0 0 1 19.5 10c0 .9-.4 1.7-1 2.2.6.7.9 1.7.9 2.8-.2.9-.8 1.7-1.6 2.1.6.6.7 1.7.2 2.5-.4.8-1.2 1.4-2.1 1.4a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2Z",
+				"data-v-inspector": "src/components/AppIcon.vue:77:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "bone" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 5 },
+		[_cache[8] || (_cache[8] = _createElementVNode(
+			"path",
+			{
+				d: "M6.5 3.5a2.5 2.5 0 1 1 2.8 2.8l7.4 7.4a2.5 2.5 0 1 1-2.8 2.8L6.5 9.1a2.5 2.5 0 1 1 0-5.6Z",
+				"data-v-inspector": "src/components/AppIcon.vue:81:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[9] || (_cache[9] = _createElementVNode(
+			"path",
+			{
+				d: "M17.5 8.5a2.5 2.5 0 1 1-2.8-2.8l-1.6 1.6M6.5 14.9l1.6-1.6",
+				"data-v-inspector": "src/components/AppIcon.vue:82:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "check" ? (_openBlock(), _createElementBlock("path", _hoisted_3)) : $setup.props.name === "close" ? (_openBlock(), _createElementBlock("path", _hoisted_4)) : $setup.props.name === "chevron-right" ? (_openBlock(), _createElementBlock("path", _hoisted_5)) : $setup.props.name === "chevron-left" ? (_openBlock(), _createElementBlock("path", _hoisted_6)) : $setup.props.name === "chevron-down" ? (_openBlock(), _createElementBlock("path", _hoisted_7)) : $setup.props.name === "flame" ? (_openBlock(), _createElementBlock("path", _hoisted_8)) : $setup.props.name === "trophy" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 12 },
+		[
+			_cache[10] || (_cache[10] = _createElementVNode(
+				"path",
+				{
+					d: "M7 4h10v5a5 5 0 0 1-10 0V4Z",
+					"data-v-inspector": "src/components/AppIcon.vue:110:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[11] || (_cache[11] = _createElementVNode(
+				"path",
+				{
+					d: "M7 5.5H4.5A2.5 2.5 0 0 0 7 10M17 5.5h2.5A2.5 2.5 0 0 1 17 10",
+					"data-v-inspector": "src/components/AppIcon.vue:111:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[12] || (_cache[12] = _createElementVNode(
+				"path",
+				{
+					d: "M12 14v3.5M8.5 21h7l-.8-3.5H9.3L8.5 21Z",
+					"data-v-inspector": "src/components/AppIcon.vue:112:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			))
+		],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "refresh" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 13 },
+		[_cache[13] || (_cache[13] = _createElementVNode(
+			"path",
+			{
+				d: "M20 12a8 8 0 1 1-2.6-5.9",
+				"data-v-inspector": "src/components/AppIcon.vue:116:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[14] || (_cache[14] = _createElementVNode(
+			"path",
+			{
+				d: "M20 4v4h-4",
+				"data-v-inspector": "src/components/AppIcon.vue:117:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "play" ? (_openBlock(), _createElementBlock("path", _hoisted_9)) : $setup.props.name === "pause" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 15 },
+		[_cache[15] || (_cache[15] = _createElementVNode(
+			"rect",
+			{
+				x: "7",
+				y: "5",
+				width: "3.4",
+				height: "14",
+				rx: "1.4",
+				fill: "currentColor",
+				stroke: "none",
+				"data-v-inspector": "src/components/AppIcon.vue:125:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[16] || (_cache[16] = _createElementVNode(
+			"rect",
+			{
+				x: "13.6",
+				y: "5",
+				width: "3.4",
+				height: "14",
+				rx: "1.4",
+				fill: "currentColor",
+				stroke: "none",
+				"data-v-inspector": "src/components/AppIcon.vue:126:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "expand" ? (_openBlock(), _createElementBlock("path", _hoisted_10)) : $setup.props.name === "volume" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 17 },
+		[_cache[17] || (_cache[17] = _createElementVNode(
+			"path",
+			{
+				d: "M11 5.5 6.8 9H3.5v6h3.3L11 18.5V5.5Z",
+				"data-v-inspector": "src/components/AppIcon.vue:134:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[18] || (_cache[18] = _createElementVNode(
+			"path",
+			{
+				d: "M14.8 9.2a4 4 0 0 1 0 5.6M17.4 6.6a7.6 7.6 0 0 1 0 10.8",
+				"data-v-inspector": "src/components/AppIcon.vue:135:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "mute" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 18 },
+		[_cache[19] || (_cache[19] = _createElementVNode(
+			"path",
+			{
+				d: "M11 5.5 6.8 9H3.5v6h3.3L11 18.5V5.5Z",
+				"data-v-inspector": "src/components/AppIcon.vue:139:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[20] || (_cache[20] = _createElementVNode(
+			"path",
+			{
+				d: "m15 9.5 5 5M20 9.5l-5 5",
+				"data-v-inspector": "src/components/AppIcon.vue:140:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "document" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 19 },
+		[_cache[21] || (_cache[21] = _createElementVNode(
+			"path",
+			{
+				d: "M6.5 3.5h7L18.5 8.5v12h-12v-17Z",
+				"data-v-inspector": "src/components/AppIcon.vue:144:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[22] || (_cache[22] = _createElementVNode(
+			"path",
+			{
+				d: "M13.5 3.5v5h5M9.5 13h5M9.5 16.5h5",
+				"data-v-inspector": "src/components/AppIcon.vue:145:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "gift" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 20 },
+		[
+			_cache[23] || (_cache[23] = _createElementVNode(
+				"path",
+				{
+					d: "M4 11.5h16v9H4v-9Z",
+					"data-v-inspector": "src/components/AppIcon.vue:149:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[24] || (_cache[24] = _createElementVNode(
+				"path",
+				{
+					d: "M3 7.5h18v4H3v-4Z",
+					"data-v-inspector": "src/components/AppIcon.vue:150:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[25] || (_cache[25] = _createElementVNode(
+				"path",
+				{
+					d: "M12 7.5v13",
+					"data-v-inspector": "src/components/AppIcon.vue:151:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[26] || (_cache[26] = _createElementVNode(
+				"path",
+				{
+					d: "M12 7.5S10.6 3.5 8.4 3.5a2 2 0 0 0 0 4H12Zm0 0s1.4-4 3.6-4a2 2 0 0 1 0 4H12Z",
+					"data-v-inspector": "src/components/AppIcon.vue:152:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			))
+		],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "lightbulb" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 21 },
+		[_cache[27] || (_cache[27] = _createElementVNode(
+			"path",
+			{
+				d: "M9 17.5h6M10 21h4",
+				"data-v-inspector": "src/components/AppIcon.vue:156:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[28] || (_cache[28] = _createElementVNode(
+			"path",
+			{
+				d: "M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3Z",
+				"data-v-inspector": "src/components/AppIcon.vue:157:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "video" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 22 },
+		[_cache[29] || (_cache[29] = _createElementVNode(
+			"rect",
+			{
+				x: "2.5",
+				y: "5.5",
+				width: "13",
+				height: "13",
+				rx: "3",
+				"data-v-inspector": "src/components/AppIcon.vue:161:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		)), _cache[30] || (_cache[30] = _createElementVNode(
+			"path",
+			{
+				d: "m15.5 10 5.5-3v10l-5.5-3",
+				"data-v-inspector": "src/components/AppIcon.vue:162:7"
+			},
+			null,
+			-1
+			/* CACHED */
+		))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "panda" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 23 },
+		[_createCommentVNode(" 熊猫头像: 竹纸白填充 + 墨黑描边, 扁平无渐变 "), _cache[31] || (_cache[31] = _createStaticVNode("<circle cx=\"6.4\" cy=\"7.2\" r=\"3\" fill=\"currentColor\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:167:7\" data-v-54b59b04></circle><circle cx=\"17.6\" cy=\"7.2\" r=\"3\" fill=\"currentColor\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:168:7\" data-v-54b59b04></circle><ellipse cx=\"12\" cy=\"12.4\" rx=\"7.8\" ry=\"7.2\" fill=\"#fff\" stroke=\"currentColor\" stroke-width=\"1.75\" data-v-inspector=\"src/components/AppIcon.vue:169:7\" data-v-54b59b04></ellipse><ellipse cx=\"9.1\" cy=\"11.6\" rx=\"1.8\" ry=\"2.2\" fill=\"currentColor\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:178:7\" data-v-54b59b04></ellipse><ellipse cx=\"14.9\" cy=\"11.6\" rx=\"1.8\" ry=\"2.2\" fill=\"currentColor\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:179:7\" data-v-54b59b04></ellipse><circle cx=\"9.5\" cy=\"11\" r=\"0.8\" fill=\"#fff\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:180:7\" data-v-54b59b04></circle><circle cx=\"15.3\" cy=\"11\" r=\"0.8\" fill=\"#fff\" stroke=\"none\" data-v-inspector=\"src/components/AppIcon.vue:181:7\" data-v-54b59b04></circle><path d=\"M12 13.6v1.1\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" fill=\"none\" data-v-inspector=\"src/components/AppIcon.vue:182:7\" data-v-54b59b04></path><path d=\"M9.9 15.2c.6-.6 1.4-.6 2.1 0 .7.6 1.5.6 2.1 0\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" fill=\"none\" data-v-inspector=\"src/components/AppIcon.vue:189:7\" data-v-54b59b04></path>", 9))],
+		64
+		/* STABLE_FRAGMENT */
+	)) : $setup.props.name === "bamboo" ? (_openBlock(), _createElementBlock(
+		_Fragment,
+		{ key: 24 },
+		[
+			_createCommentVNode(" 翠竹 "),
+			_cache[32] || (_cache[32] = _createElementVNode(
+				"path",
+				{
+					d: "M8 21V6.5",
+					"data-v-inspector": "src/components/AppIcon.vue:200:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[33] || (_cache[33] = _createElementVNode(
+				"path",
+				{
+					d: "M5.8 10.5h4.4M5.8 15.5h4.4M5.8 19h4.4",
+					"data-v-inspector": "src/components/AppIcon.vue:201:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[34] || (_cache[34] = _createElementVNode(
+				"path",
+				{
+					d: "M8 8.5C10.5 6 13 5.5 15.5 6.5 14 8.8 11.5 9.6 8 8.5Z",
+					"data-v-inspector": "src/components/AppIcon.vue:202:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			)),
+			_cache[35] || (_cache[35] = _createElementVNode(
+				"path",
+				{
+					d: "M8 12.5c2.8-2 5.8-2.4 8.4-1.2-1.6 2.2-4.2 2.9-8.4 1.2Z",
+					"data-v-inspector": "src/components/AppIcon.vue:203:7"
+				},
+				null,
+				-1
+				/* CACHED */
+			))
+		],
+		64
+		/* STABLE_FRAGMENT */
+	)) : _createCommentVNode("v-if", true)], 8, _hoisted_1);
+}
+import "/src/components/AppIcon.vue?vue&type=style&index=0&scoped=54b59b04&lang.css";
+_sfc_main.__hmrId = "54b59b04";
+typeof __VUE_HMR_RUNTIME__ !== "undefined" && __VUE_HMR_RUNTIME__.createRecord(_sfc_main.__hmrId, _sfc_main);
+import.meta.hot.on("file-changed", ({ file }) => {
+	__VUE_HMR_RUNTIME__.CHANGED_FILE = file;
+});
+import.meta.hot.accept((mod) => {
+	if (!mod) return;
+	const { default: updated, _rerender_only } = mod;
+	if (_rerender_only) {
+		__VUE_HMR_RUNTIME__.rerender(updated.__hmrId, updated.render);
+	} else {
+		__VUE_HMR_RUNTIME__.reload(updated.__hmrId, updated);
+	}
+});
+import _export_sfc from "/@id/__x00__plugin-vue:export-helper";
+export default /*#__PURE__*/ _export_sfc(_sfc_main, [
+	["render", _sfc_render],
+	["__scopeId", "data-v-54b59b04"],
+	["__file", "E:/Desktop/huaxicode/hxproject/topic/src/components/AppIcon.vue"]
+]);
+
+//# sourceMappingURL=data:application/json;base64,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O0tBQWEsb0JBQWlCOzs7Ozs7R0FDdEM7SUFBNkk7SUFBQTtLQUF2SSxHQUFFO0tBQStFLG9CQUFpQjs7Ozs7Ozs7O01BR3JGLGFBQU0sU0FBSSxlQUEvQjtFQUdXO0VBQUE7RUFBQSxDQUZUO0dBQWtGO0dBQUE7SUFBNUUsR0FBRTtJQUFvQixvQkFBaUI7Ozs7O01BQzdDO0dBQW1IO0dBQUE7SUFBN0csR0FBRTtJQUFxRCxvQkFBaUI7Ozs7Ozs7O01BRzNELGFBQU0sU0FBSSxXQUEvQjtFQUdXO0VBQUE7RUFBQSxDQUZUO0dBQTBHO0dBQUE7SUFBcEcsR0FBRTtJQUFNLEdBQUU7SUFBTSxPQUFNO0lBQUssUUFBTztJQUFLLElBQUc7SUFBSSxvQkFBaUI7Ozs7O01BQ3JFO0dBQXlGO0dBQUE7SUFBbkYsR0FBRTtJQUEyQixvQkFBaUI7Ozs7Ozs7O01BSWpDLGFBQU0sU0FBSSxXQUEvQjtFQThCVztFQUFBO0VBQUEsQ0EvQlgsb0Q7OztNQWtDcUIsYUFBTSxTQUFJLFlBQS9CO0VBS1c7RUFBQTtFQUFBO0dBTlg7R0FFRTtJQUEwRTtJQUFBO0tBQXBFLEdBQUU7S0FBWSxvQkFBaUI7Ozs7OztHQUNyQztJQUFzRztJQUFBO0tBQWhHLEdBQUU7S0FBd0Msb0JBQWlCOzs7Ozs7R0FDakU7SUFBcUg7SUFBQTtLQUEvRyxHQUFFO0tBQXVELG9CQUFpQjs7Ozs7O0dBQ2hGO0lBQXVIO0lBQUE7S0FBakgsR0FBRTtLQUF5RCxvQkFBaUIiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkFwcEljb24udnVlIl0sInNvdXJjZXNDb250ZW50IjpbIjxzY3JpcHQgc2V0dXAgbGFuZz1cInRzXCI+XG4vKipcbiAqIOe7n+S4gOe6v+aAp+Wbvuagh+mbhiAoMjR4MjQsIHN0cm9rZSAxLjc1KVxuICog5YWo6YOo5YaF6IGUIFNWRywg5LiN5L2/55SoIGVtb2ppLCDkv53mjIHot6jnq6/kuIDoh7Tlj6/nvKnmlL5cbiAqL1xuZXhwb3J0IHR5cGUgSWNvbk5hbWUgPVxuICB8ICdoZWFydCdcbiAgfCAncGlsbCdcbiAgfCAnbGVhZidcbiAgfCAnYnJhaW4nXG4gIHwgJ2JvbmUnXG4gIHwgJ2NoZWNrJ1xuICB8ICdjbG9zZSdcbiAgfCAnY2hldnJvbi1yaWdodCdcbiAgfCAnY2hldnJvbi1sZWZ0J1xuICB8ICdjaGV2cm9uLWRvd24nXG4gIHwgJ2ZsYW1lJ1xuICB8ICd0cm9waHknXG4gIHwgJ3JlZnJlc2gnXG4gIHwgJ3BsYXknXG4gIHwgJ3BhdXNlJ1xuICB8ICdleHBhbmQnXG4gIHwgJ3ZvbHVtZSdcbiAgfCAnbXV0ZSdcbiAgfCAnZG9jdW1lbnQnXG4gIHwgJ2dpZnQnXG4gIHwgJ2ZpbG0nXG4gIHwgJ2xpZ2h0YnVsYidcbiAgfCAndmlkZW8nXG4gIHwgJ3BhbmRhJ1xuICB8ICdiYW1ib28nXG5cbmNvbnN0IHByb3BzID0gd2l0aERlZmF1bHRzKFxuICBkZWZpbmVQcm9wczx7XG4gICAgbmFtZTogSWNvbk5hbWVcbiAgICBzaXplPzogbnVtYmVyXG4gICAgLyoqIOe6r+ijhemlsOaAp+Wbvuaghyjml4Hovrnlt7LmnInlj6/op4HmloflrZcp6K+36K6+5Li6IHRydWUgKi9cbiAgICBkZWNvcmF0aXZlPzogYm9vbGVhblxuICB9PigpLFxuICB7IHNpemU6IDI0LCBkZWNvcmF0aXZlOiBmYWxzZSB9LFxuKVxuPC9zY3JpcHQ+XG5cbjx0ZW1wbGF0ZT5cbiAgPHN2Z1xuICAgIGNsYXNzPVwiaWNvblwiXG4gICAgOndpZHRoPVwicHJvcHMuc2l6ZVwiXG4gICAgOmhlaWdodD1cInByb3BzLnNpemVcIlxuICAgIHZpZXdCb3g9XCIwIDAgMjQgMjRcIlxuICAgIGZpbGw9XCJub25lXCJcbiAgICBzdHJva2U9XCJjdXJyZW50Q29sb3JcIlxuICAgIHN0cm9rZS13aWR0aD1cIjEuNzVcIlxuICAgIHN0cm9rZS1saW5lY2FwPVwicm91bmRcIlxuICAgIHN0cm9rZS1saW5lam9pbj1cInJvdW5kXCJcbiAgICA6YXJpYS1oaWRkZW49XCJwcm9wcy5kZWNvcmF0aXZlID8gJ3RydWUnIDogdW5kZWZpbmVkXCJcbiAgICA6cm9sZT1cInByb3BzLmRlY29yYXRpdmUgPyB1bmRlZmluZWQgOiAnaW1nJ1wiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZTo0NTozXCJcbiAgPlxuICAgIDx0aXRsZSB2LWlmPVwiIXByb3BzLmRlY29yYXRpdmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6NTg6NVwiPjxzbG90IC8+PC90aXRsZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWlmPVwicHJvcHMubmFtZSA9PT0gJ2hlYXJ0J1wiPlxuICAgICAgPHBhdGggZD1cIk0yMC44IDUuNmE1IDUgMCAwIDAtNy4xIDBMMTIgNy4zbC0xLjctMS43YTUgNSAwIDEgMC03LjEgNy4xTDEyIDIxLjVsOC44LTguOGE1IDUgMCAwIDAgMC03LjFaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjYxOjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk0zLjUgMTIuNWgzbDEuNS0zIDIgNSAxLjgtMy41IDEuMiAxLjVoNFwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZTo2Mjo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdwaWxsJ1wiPlxuICAgICAgPHJlY3QgeD1cIjIuNlwiIHk9XCI4LjRcIiB3aWR0aD1cIjE4LjhcIiBoZWlnaHQ9XCI3LjJcIiByeD1cIjMuNlwiIHRyYW5zZm9ybT1cInJvdGF0ZSgtNDUgMTIgMTIpXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjY2OjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk04LjUgOC41IDE1LjUgMTUuNVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZTo2Nzo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdsZWFmJ1wiPlxuICAgICAgPHBhdGggZD1cIk00IDIwYzAtOCA1LTE0IDE2LTE1IDAgMTAtNS41IDE1LTExIDE1LTIuNSAwLTUtMS01LTFaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjcxOjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk05IDE1YzIuNS0zLjUgNS41LTUuNSA5LTdcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6NzI6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnYnJhaW4nXCI+XG4gICAgICA8cGF0aCBkPVwiTTkuNSA0LjVBMi41IDIuNSAwIDAgMCA3IDd2LjRBMi42IDIuNiAwIDAgMCA0LjUgMTBjMCAuOS40IDEuNyAxIDIuMkEyLjYgMi42IDAgMCAwIDQuNiAxNWMuMi45LjggMS43IDEuNiAyLjFBMi41IDIuNSAwIDAgMCA5LjUgMjBhMiAyIDAgMCAwIDItMlY2LjVhMiAyIDAgMCAwLTItMlpcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6NzY6N1wiIC8+XG4gICAgICA8cGF0aCBkPVwiTTE0LjUgNC41QTIuNSAyLjUgMCAwIDEgMTcgN3YuNEEyLjYgMi42IDAgMCAxIDE5LjUgMTBjMCAuOS0uNCAxLjctMSAyLjIuNi43LjkgMS43LjkgMi44LS4yLjktLjggMS43LTEuNiAyLjEuNi42LjcgMS43LjIgMi41LS40LjgtMS4yIDEuNC0yLjEgMS40YTIgMiAwIDAgMS0yLTJWNi41YTIgMiAwIDAgMSAyLTJaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjc3OjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG5cbiAgICA8dGVtcGxhdGUgdi1lbHNlLWlmPVwicHJvcHMubmFtZSA9PT0gJ2JvbmUnXCI+XG4gICAgICA8cGF0aCBkPVwiTTYuNSAzLjVhMi41IDIuNSAwIDEgMSAyLjggMi44bDcuNCA3LjRhMi41IDIuNSAwIDEgMS0yLjggMi44TDYuNSA5LjFhMi41IDIuNSAwIDEgMSAwLTUuNlpcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6ODE6N1wiIC8+XG4gICAgICA8cGF0aCBkPVwiTTE3LjUgOC41YTIuNSAyLjUgMCAxIDEtMi44LTIuOGwtMS42IDEuNk02LjUgMTQuOWwxLjYtMS42XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjgyOjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG5cbiAgICA8dGVtcGxhdGUgdi1lbHNlLWlmPVwicHJvcHMubmFtZSA9PT0gJ2NoZWNrJ1wiPlxuICAgICAgPHBhdGggZD1cIm00LjUgMTIuNSA1IDUgMTAtMTFcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6ODY6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnY2xvc2UnXCI+XG4gICAgICA8cGF0aCBkPVwiTTYgNmwxMiAxMk0xOCA2IDYgMThcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6OTA6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnY2hldnJvbi1yaWdodCdcIj5cbiAgICAgIDxwYXRoIGQ9XCJtOSA1IDcgNy03IDdcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6OTQ6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnY2hldnJvbi1sZWZ0J1wiPlxuICAgICAgPHBhdGggZD1cIm0xNSA1LTcgNyA3IDdcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6OTg6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnY2hldnJvbi1kb3duJ1wiPlxuICAgICAgPHBhdGggZD1cIm01IDkgNyA3IDctN1wiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxMDI6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnZmxhbWUnXCI+XG4gICAgICA8cGF0aCBkPVwiTTEyIDIuNXM1LjUgNC4yIDUuNSA5LjJBNS41IDUuNSAwIDAgMSAxMiAyMS41YTUuNSA1LjUgMCAwIDEtNS41LTUuOGMwLTIuMiAxLjItMy42IDIuMi00LjYuMyAxLjIgMS4xIDIgMS45IDIgLjUtMyAxLTQuNSAxLjQtNi42WlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxMDY6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAndHJvcGh5J1wiPlxuICAgICAgPHBhdGggZD1cIk03IDRoMTB2NWE1IDUgMCAwIDEtMTAgMFY0WlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxMTA6N1wiIC8+XG4gICAgICA8cGF0aCBkPVwiTTcgNS41SDQuNUEyLjUgMi41IDAgMCAwIDcgMTBNMTcgNS41aDIuNUEyLjUgMi41IDAgMCAxIDE3IDEwXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjExMTo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTIgMTR2My41TTguNSAyMWg3bC0uOC0zLjVIOS4zTDguNSAyMVpcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTEyOjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG5cbiAgICA8dGVtcGxhdGUgdi1lbHNlLWlmPVwicHJvcHMubmFtZSA9PT0gJ3JlZnJlc2gnXCI+XG4gICAgICA8cGF0aCBkPVwiTTIwIDEyYTggOCAwIDEgMS0yLjYtNS45XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjExNjo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMjAgNHY0aC00XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjExNzo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdwbGF5J1wiPlxuICAgICAgPHBhdGggZD1cIk04IDUuNXYxM2wxMC41LTYuNUw4IDUuNVpcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlPVwibm9uZVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxMjE6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAncGF1c2UnXCI+XG4gICAgICA8cmVjdCB4PVwiN1wiIHk9XCI1XCIgd2lkdGg9XCIzLjRcIiBoZWlnaHQ9XCIxNFwiIHJ4PVwiMS40XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIHN0cm9rZT1cIm5vbmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTI1OjdcIiAvPlxuICAgICAgPHJlY3QgeD1cIjEzLjZcIiB5PVwiNVwiIHdpZHRoPVwiMy40XCIgaGVpZ2h0PVwiMTRcIiByeD1cIjEuNFwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBzdHJva2U9XCJub25lXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjEyNjo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdleHBhbmQnXCI+XG4gICAgICA8cGF0aCBkPVwiTTkgNC41SDQuNVY5TTE1IDQuNWg0LjVWOU05IDE5LjVINC41VjE1TTE1IDE5LjVoNC41VjE1XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjEzMDo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICd2b2x1bWUnXCI+XG4gICAgICA8cGF0aCBkPVwiTTExIDUuNSA2LjggOUgzLjV2NmgzLjNMMTEgMTguNVY1LjVaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjEzNDo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTQuOCA5LjJhNCA0IDAgMCAxIDAgNS42TTE3LjQgNi42YTcuNiA3LjYgMCAwIDEgMCAxMC44XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjEzNTo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdtdXRlJ1wiPlxuICAgICAgPHBhdGggZD1cIk0xMSA1LjUgNi44IDlIMy41djZoMy4zTDExIDE4LjVWNS41WlwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxMzk6N1wiIC8+XG4gICAgICA8cGF0aCBkPVwibTE1IDkuNSA1IDVNMjAgOS41bC01IDVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTQwOjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG5cbiAgICA8dGVtcGxhdGUgdi1lbHNlLWlmPVwicHJvcHMubmFtZSA9PT0gJ2RvY3VtZW50J1wiPlxuICAgICAgPHBhdGggZD1cIk02LjUgMy41aDdMMTguNSA4LjV2MTJoLTEydi0xN1pcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTQ0OjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk0xMy41IDMuNXY1aDVNOS41IDEzaDVNOS41IDE2LjVoNVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxNDU6N1wiIC8+XG4gICAgPC90ZW1wbGF0ZT5cblxuICAgIDx0ZW1wbGF0ZSB2LWVsc2UtaWY9XCJwcm9wcy5uYW1lID09PSAnZ2lmdCdcIj5cbiAgICAgIDxwYXRoIGQ9XCJNNCAxMS41aDE2djlINHYtOVpcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTQ5OjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk0zIDcuNWgxOHY0SDN2LTRaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE1MDo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTIgNy41djEzXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE1MTo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNMTIgNy41UzEwLjYgMy41IDguNCAzLjVhMiAyIDAgMCAwIDAgNEgxMlptMCAwczEuNC00IDMuNi00YTIgMiAwIDAgMSAwIDRIMTJaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE1Mjo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdsaWdodGJ1bGInXCI+XG4gICAgICA8cGF0aCBkPVwiTTkgMTcuNWg2TTEwIDIxaDRcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTU2OjdcIiAvPlxuICAgICAgPHBhdGggZD1cIk0xMiAzYTYgNiAwIDAgMC0zLjUgMTAuOVYxN2g3di0zLjFBNiA2IDAgMCAwIDEyIDNaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE1Nzo3XCIgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICd2aWRlbydcIj5cbiAgICAgIDxyZWN0IHg9XCIyLjVcIiB5PVwiNS41XCIgd2lkdGg9XCIxM1wiIGhlaWdodD1cIjEzXCIgcng9XCIzXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE2MTo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJtMTUuNSAxMCA1LjUtM3YxMGwtNS41LTNcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTYyOjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG5cbiAgICA8IS0tIOeGiueMq+WktOWDjzog56u557q455m95aGr5YWFICsg5aKo6buR5o+P6L65LCDmiYHlubPml6DmuJDlj5ggLS0+XG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdwYW5kYSdcIj5cbiAgICAgIDxjaXJjbGUgY3g9XCI2LjRcIiBjeT1cIjcuMlwiIHI9XCIzXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIHN0cm9rZT1cIm5vbmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTY3OjdcIiAvPlxuICAgICAgPGNpcmNsZSBjeD1cIjE3LjZcIiBjeT1cIjcuMlwiIHI9XCIzXCIgZmlsbD1cImN1cnJlbnRDb2xvclwiIHN0cm9rZT1cIm5vbmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTY4OjdcIiAvPlxuICAgICAgPGVsbGlwc2VcbiAgICAgICAgY3g9XCIxMlwiXG4gICAgICAgIGN5PVwiMTIuNFwiXG4gICAgICAgIHJ4PVwiNy44XCJcbiAgICAgICAgcnk9XCI3LjJcIlxuICAgICAgICBmaWxsPVwiI2ZmZlwiXG4gICAgICAgIHN0cm9rZT1cImN1cnJlbnRDb2xvclwiXG4gICAgICAgIHN0cm9rZS13aWR0aD1cIjEuNzVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTY5OjdcIlxuICAgICAgLz5cbiAgICAgIDxlbGxpcHNlIGN4PVwiOS4xXCIgY3k9XCIxMS42XCIgcng9XCIxLjhcIiByeT1cIjIuMlwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiBzdHJva2U9XCJub25lXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjE3ODo3XCIgLz5cbiAgICAgIDxlbGxpcHNlIGN4PVwiMTQuOVwiIGN5PVwiMTEuNlwiIHJ4PVwiMS44XCIgcnk9XCIyLjJcIiBmaWxsPVwiY3VycmVudENvbG9yXCIgc3Ryb2tlPVwibm9uZVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxNzk6N1wiIC8+XG4gICAgICA8Y2lyY2xlIGN4PVwiOS41XCIgY3k9XCIxMVwiIHI9XCIwLjhcIiBmaWxsPVwiI2ZmZlwiIHN0cm9rZT1cIm5vbmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTgwOjdcIiAvPlxuICAgICAgPGNpcmNsZSBjeD1cIjE1LjNcIiBjeT1cIjExXCIgcj1cIjAuOFwiIGZpbGw9XCIjZmZmXCIgc3Ryb2tlPVwibm9uZVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxODE6N1wiIC8+XG4gICAgICA8cGF0aFxuICAgICAgICBkPVwiTTEyIDEzLjZ2MS4xXCJcbiAgICAgICAgc3Ryb2tlPVwiY3VycmVudENvbG9yXCJcbiAgICAgICAgc3Ryb2tlLXdpZHRoPVwiMS43NVwiXG4gICAgICAgIHN0cm9rZS1saW5lY2FwPVwicm91bmRcIlxuICAgICAgICBmaWxsPVwibm9uZVwiIGRhdGEtdi1pbnNwZWN0b3I9XCJzcmMvY29tcG9uZW50cy9BcHBJY29uLnZ1ZToxODI6N1wiXG4gICAgICAvPlxuICAgICAgPHBhdGhcbiAgICAgICAgZD1cIk05LjkgMTUuMmMuNi0uNiAxLjQtLjYgMi4xIDAgLjcuNiAxLjUuNiAyLjEgMFwiXG4gICAgICAgIHN0cm9rZT1cImN1cnJlbnRDb2xvclwiXG4gICAgICAgIHN0cm9rZS13aWR0aD1cIjEuNzVcIlxuICAgICAgICBzdHJva2UtbGluZWNhcD1cInJvdW5kXCJcbiAgICAgICAgZmlsbD1cIm5vbmVcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MTg5OjdcIlxuICAgICAgLz5cbiAgICA8L3RlbXBsYXRlPlxuXG4gICAgPCEtLSDnv6Dnq7kgLS0+XG4gICAgPHRlbXBsYXRlIHYtZWxzZS1pZj1cInByb3BzLm5hbWUgPT09ICdiYW1ib28nXCI+XG4gICAgICA8cGF0aCBkPVwiTTggMjFWNi41XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjIwMDo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNNS44IDEwLjVoNC40TTUuOCAxNS41aDQuNE01LjggMTloNC40XCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjIwMTo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNOCA4LjVDMTAuNSA2IDEzIDUuNSAxNS41IDYuNSAxNCA4LjggMTEuNSA5LjYgOCA4LjVaXCIgZGF0YS12LWluc3BlY3Rvcj1cInNyYy9jb21wb25lbnRzL0FwcEljb24udnVlOjIwMjo3XCIgLz5cbiAgICAgIDxwYXRoIGQ9XCJNOCAxMi41YzIuOC0yIDUuOC0yLjQgOC40LTEuMi0xLjYgMi4yLTQuMiAyLjktOC40IDEuMlpcIiBkYXRhLXYtaW5zcGVjdG9yPVwic3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWU6MjAzOjdcIiAvPlxuICAgIDwvdGVtcGxhdGU+XG4gIDwvc3ZnPlxuPC90ZW1wbGF0ZT5cblxuPHN0eWxlIHNjb3BlZD5cbi5pY29uIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGZsZXg6IG5vbmU7XG59XG48L3N0eWxlPlxuIl0sImZpbGUiOiJFOi9EZXNrdG9wL2h1YXhpY29kZS9oeHByb2plY3QvdG9waWMvc3JjL2NvbXBvbmVudHMvQXBwSWNvbi52dWUifQ==
