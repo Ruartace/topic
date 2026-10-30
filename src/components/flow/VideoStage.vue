@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import AppIcon from '@/components/AppIcon.vue'
+import BambooLoader from '@/components/flow/BambooLoader.vue'
+import IntroSequence from '@/components/flow/IntroSequence.vue'
 import { VIDEO, formatTime } from '@/data/journey'
 
 /**
@@ -26,9 +28,33 @@ const duration = ref(0)
 const showNotes = ref(false)
 const ended = ref(false)
 const isFullscreen = ref(false)
+/** 视频缓冲中: 用竹环指示器压在画面中央 */
+const buffering = ref(false)
+/** 用户是否发起过播放: 用来区分「还没开始」和「正在缓冲」 */
+const started = ref(props.startAt > 0)
 
-/** 是否还没开始播放: 此时只显示封面, HUD 与控制条全部让位 */
-const idle = computed(() => !playing.value && current.value === 0 && !ended.value)
+/**
+ * 片头状态: idle 未播 / playing 正在播 / done 已播过
+ *
+ * 片头是 3 秒的 12 帧关键帧动画, 当作正片的前置片头:
+ * 用户在封面上点播放 → 先播片头 → 片头结束自动进正片。
+ * 「回看这一段」是跳进片子中间, 不播片头, 直接定位起播。
+ */
+const introState = ref<'idle' | 'playing' | 'done'>(props.startAt > 0 ? 'done' : 'idle')
+
+const introPlaying = computed(() => introState.value === 'playing')
+
+/**
+ * 是否还没开始播放: 此时只显示封面, HUD 与控制条全部让位
+ *
+ * 判定用「没在播 + 进度在 0 秒」, 所以用户把片子拖回开头再暂停, 封面会重新盖回来。
+ */
+const idle = computed(
+  () => !ended.value && !introPlaying.value && !playing.value && current.value === 0,
+)
+
+/** HUD 与控制条的可见性: 片头期间也不出现, 避免和动画叠在一起 */
+const showChrome = computed(() => !idle.value && !introPlaying.value)
 
 const progress = computed(() =>
   duration.value > 0 ? (current.value / duration.value) * 100 : 0,
@@ -44,10 +70,25 @@ const chapterMarks = computed(() =>
     })),
 )
 
+/** 用户是否开启了降低动态效果 */
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
 function togglePlay() {
   const v = videoEl.value
   if (!v) return
+  // 片头正在放: 不接受点击, 免得视频在动画底下偷偷起播
+  if (introPlaying.value) return
+
   if (v.paused) {
+    // 首次起播: 先走 3 秒片头, 片头结束自动进正片
+    if (introState.value === 'idle' && !prefersReducedMotion()) {
+      started.value = true
+      introState.value = 'playing'
+      return
+    }
+    started.value = true
     void v.play()
   } else {
     v.pause()
@@ -58,9 +99,11 @@ function seekTo(sec: number) {
   const v = videoEl.value
   if (!v) return
   v.currentTime = sec
+  // 跳转到某一段时不播片头, 直接进正片
+  introState.value = 'done'
+  started.value = true
   if (v.paused) void v.play()
 }
-
 function onTimeUpdate() {
   const v = videoEl.value
   if (!v) return
@@ -82,6 +125,20 @@ function onEnded() {
   playing.value = false
   ended.value = true
   emit('finished')
+}
+
+/** 片头播完: 撤掉动画层, 自动进正片 */
+function onIntroFinished() {
+  introState.value = 'done'
+  const v = videoEl.value
+  if (!v) return
+  // 先把 playing 置上, 否则在 play 事件到达之前会闪一下封面
+  playing.value = true
+  started.value = true
+  void v.play().catch(() => {
+    // 浏览器拦了自动播放 (少见): 退回封面, 让用户自己点
+    playing.value = false
+  })
 }
 
 async function toggleFullscreen() {
@@ -127,8 +184,20 @@ onBeforeUnmount(() => {
         @pause="playing = false"
         @timeupdate="onTimeUpdate"
         @loadedmetadata="onLoaded"
+        @waiting="buffering = true"
+        @stalled="buffering = true"
+        @canplay="buffering = false"
+        @playing="buffering = false"
         @ended="onEnded"
       />
+
+      <!-- 片头: 12 帧关键帧动画, 盖住画面, 播完才露出封面 -->
+      <IntroSequence v-if="introPlaying" @finished="onIntroFinished" />
+
+      <!-- 缓冲中: 竹环指示器 -->
+      <div v-if="buffering && started && !introPlaying" class="watch__buffering">
+        <BambooLoader :size="46" />
+      </div>
 
       <!-- 未播放时的封面层: 独占画面, HUD 与控制条此时隐藏, 避免文字叠压 -->
       <Transition name="cover">
@@ -155,7 +224,7 @@ onBeforeUnmount(() => {
       </Transition>
 
       <!-- 顶部: 标题 + 章节刻度 (播放中才出现) -->
-      <div v-if="!idle" class="watch__hud">
+      <div v-if="showChrome" class="watch__hud">
         <div class="watch__hud-row">
           <span class="watch__hud-title">{{ VIDEO.title }}</span>
           <span class="watch__hud-time">{{ formatTime(current) }} / {{ formatTime(duration) }}</span>
@@ -176,7 +245,7 @@ onBeforeUnmount(() => {
       </div>
 
       <!-- 底部: 控制条 -->
-      <div v-if="!idle" class="watch__controls">
+      <div v-if="showChrome" class="watch__controls">
         <button type="button" class="ctrl" :aria-label="playing ? '暂停' : '播放'" @click="togglePlay">
           <AppIcon :name="playing ? 'pause' : 'play'" :size="18" decorative />
         </button>
@@ -312,6 +381,16 @@ onBeforeUnmount(() => {
 .watch__poster-desc {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.72);
+}
+
+/* ---------- 缓冲指示 ---------- */
+.watch__buffering {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .watch__done {

@@ -1,0 +1,7 @@
+<!-- intro-03.svg | 1080x1920 (9:16) | 时长 0.25s | 12fps | 第 3 / 12 帧 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect x="0" y="0" width="1080" height="1920" fill="#f6f6f0"/>
+  <g opacity="0.8">
+    <line x1="80" y1="1280" x2="1000" y2="1280" stroke="#262b26" stroke-width="6" stroke-linecap="round" pathLength="920" stroke-dasharray="920 920" stroke-dashoffset="0"/>
+  </g>
+</svg>

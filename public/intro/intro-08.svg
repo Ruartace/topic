@@ -1,0 +1,14 @@
+<!-- intro-08.svg | 1080x1920 (9:16) | 时长 0.25s | 12fps | 第 8 / 12 帧 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect x="0" y="0" width="1080" height="1920" fill="#f6f6f0"/>
+  <g opacity="0.96">
+    <line x1="80" y1="1280" x2="1000" y2="1280" stroke="#262b26" stroke-width="6" stroke-linecap="round" pathLength="920" stroke-dasharray="920 920" stroke-dashoffset="0"/>
+    <path d="M 80 1277 Q 139.8 1221.5 158 1141.9 Q 98.2 1197.5 80 1277 Z" fill="#476b50" stroke="#c2d6c4" stroke-width="6" stroke-linejoin="round" opacity="1"/>
+    <line x1="80" y1="1277" x2="158" y2="1141.9" stroke="#e8f0e6" stroke-width="6" stroke-linecap="round" opacity="1"/>
+    <path d="M 80 1277 Q 162.1 1236 208.7 1157 Q 126.6 1198 80 1277 Z" fill="#476b50" stroke="#c2d6c4" stroke-width="6" stroke-linejoin="round" opacity="1"/>
+    <line x1="80" y1="1277" x2="208.7" y2="1157" stroke="#e8f0e6" stroke-width="6" stroke-linecap="round" opacity="1"/>
+    <path d="M 80 1277 Q 170.4 1256.6 235.7 1190.7 Q 145.2 1211.1 80 1277 Z" fill="#476b50" stroke="#c2d6c4" stroke-width="6" stroke-linejoin="round" opacity="1"/>
+    <line x1="80" y1="1277" x2="235.7" y2="1190.7" stroke="#e8f0e6" stroke-width="6" stroke-linecap="round" opacity="1"/>
+    <circle cx="952" cy="1246" r="32" fill="#262b26" opacity="0.8"/>
+  </g>
+</svg>
