@@ -303,10 +303,6 @@ onBeforeUnmount(() => {
 
         <!-- 5 · 解析 -->
         <section v-else-if="stage === 'review'" key="review" class="panel">
-          <p class="panel__eyebrow">
-            <AppIcon name="document" :size="15" decorative />
-            你的答案
-          </p>
           <ReviewStage
             :pre="session.pre"
             :post="session.post"
@@ -314,13 +310,8 @@ onBeforeUnmount(() => {
             :post-correct="postCorrect"
             :prize="prize"
             @retry="retry"
+            @lottery="toLottery"
           />
-          <div class="panel__row">
-            <button type="button" class="cta-wide" @click="toLottery">
-              <AppIcon name="gift" :size="18" decorative />
-              {{ prize ? '再摇一次' : '抽一份奖品' }}
-            </button>
-          </div>
         </section>
 
         <!-- 6 · 抽奖 -->
