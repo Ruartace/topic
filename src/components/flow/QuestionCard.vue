@@ -92,6 +92,13 @@ function advance() {
       </span>
     </div>
 
+    <!-- 配图占位: 后续替换真实图片时只需换掉这一块背景 -->
+    <div class="card__media" role="img" :aria-label="`配图占位 · ${props.question.category}`">
+      <span class="card__media-icon">
+        <AppIcon :name="props.question.categoryIcon" :size="26" decorative />
+      </span>
+    </div>
+
     <h2 class="card__title">{{ props.question.title }}</h2>
 
     <p v-if="props.question.tip" class="card__tip">{{ props.question.tip }}</p>
@@ -160,7 +167,7 @@ function advance() {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--sp-3);
+  gap: var(--sp-2);
 }
 
 .card__count {
@@ -183,8 +190,29 @@ function advance() {
   padding: 4px 10px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--c-primary-strong);
-  background: var(--c-primary-soft);
+  color: #fff;
+  background: var(--c-sage);
+  border-radius: var(--r-pill);
+}
+
+/* ---------- 配图占位 ---------- */
+.card__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background: var(--c-ink);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.card__media-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  color: var(--c-ink);
+  background: #fff;
   border-radius: var(--r-pill);
 }
 

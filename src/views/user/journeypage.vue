@@ -36,28 +36,6 @@ const prize = ref<Prize | null>(null)
 const questions = quizQuestions
 const total = questions.length
 
-/** 顶部流程指示: 1 观前 2 观片 3 观后 4 结果 */
-const STEPS: { key: Stage; label: string }[] = [
-  { key: 'pre', label: '观前' },
-  { key: 'video', label: '观片' },
-  { key: 'post', label: '观后' },
-  { key: 'review', label: '解析' },
-]
-
-const stepIndex = computed(() => {
-  const map: Record<Stage, number> = {
-    intro: -1,
-    pre: 0,
-    video: 1,
-    post: 2,
-    review: 3,
-    lottery: 3,
-  }
-  return map[stage.value]
-})
-
-const showRail = computed(() => stage.value !== 'intro' && stage.value !== 'lottery')
-
 const currentPre = computed(() => questions[preIndex.value]!)
 const currentPost = computed(() => questions[postIndex.value]!)
 
@@ -65,19 +43,6 @@ const currentPost = computed(() => questions[postIndex.value]!)
 const preHint = computed(() => {
   const left = total - preIndex.value
   return left > 1 ? `还有 ${left} 题` : '最后一题'
-})
-
-/** 顶部计数: 观片阶段不显示题号, 其余按当前阶段取 */
-const currentNumber = computed(() => {
-  if (stage.value === 'post') return postIndex.value + 1
-  return preIndex.value + 1
-})
-
-/** 顶部计数文案: 观片阶段不报题号 */
-const railCount = computed(() => {
-  if (session.submitted) return `答对 ${postCorrect.value} 题`
-  if (stage.value === 'video') return '27 秒短片'
-  return `第 ${Math.min(currentNumber.value, total)} 题 / 共 ${total}`
 })
 
 /* ---------------- 观前作答 ---------------- */
@@ -229,19 +194,6 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="flow" :class="`is-${stage}`">
-    <!-- 顶部流程指示 -->
-    <header v-if="showRail" class="rail">
-      <div class="rail__inner">
-        <ol class="rail__list">
-          <li v-for="(s, i) in STEPS" :key="s.key" class="rail__item" :class="{ 'is-done': i < stepIndex, 'is-now': i === stepIndex }">
-            <span class="rail__dot" aria-hidden="true" />
-            <span class="rail__label">{{ s.label }}</span>
-          </li>
-        </ol>
-        <span class="rail__count">{{ railCount }}</span>
-      </div>
-    </header>
-
     <main class="stage">
       <!-- 单向动线: 入场 → 观前 → 观片 → 观后 → 解析 → 抽奖
            六个场景放在同一个 Transition 内, 保证 v-if / v-else-if 是连续的兄弟链 -->
@@ -348,97 +300,6 @@ onBeforeUnmount(() => {
     var(--c-bg);
 }
 
-/* ---------- 顶部流程指示 ---------- */
-.rail {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(246, 246, 240, 0.86);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--c-divider);
-  /* 左右边缘渐隐, 暗示可以横滑 */
-  mask-image: linear-gradient(90deg, #000 88%, transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent 100%);
-}
-
-.rail__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-3);
-  padding: var(--sp-3) var(--gutter);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.rail__inner::-webkit-scrollbar {
-  display: none;
-}
-
-.rail__list {
-  display: flex;
-  align-items: center;
-  flex: none;
-  gap: var(--sp-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.rail__item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 3px 9px 3px 6px;
-  border-radius: var(--r-pill);
-  transition: background-color var(--dur) var(--ease);
-}
-
-.rail__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: var(--r-pill);
-  background: var(--c-border-strong);
-  transition:
-    background-color var(--dur) var(--ease),
-    transform var(--dur) var(--ease);
-}
-
-.rail__label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--c-ink-3);
-  transition: color var(--dur) var(--ease);
-}
-
-.rail__item.is-done .rail__dot {
-  background: var(--c-primary);
-}
-
-.rail__item.is-done .rail__label {
-  color: var(--c-ink-2);
-}
-
-.rail__item.is-now {
-  background: var(--c-primary-soft);
-}
-
-.rail__item.is-now .rail__dot {
-  background: var(--c-primary);
-  transform: scale(1.35);
-}
-
-.rail__item.is-now .rail__label {
-  color: var(--c-primary-strong);
-}
-
-.rail__count {
-  flex: none;
-  font-size: 12px;
-  font-variant-numeric: tabular-nums;
-  color: var(--c-ink-3);
-}
-
 /* ---------- 舞台 ---------- */
 .stage {
   position: relative;
@@ -468,8 +329,8 @@ onBeforeUnmount(() => {
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.03em;
-  color: var(--c-primary-strong);
-  background: var(--c-primary-soft);
+  color: #fff;
+  background: var(--c-sage);
   border-radius: var(--r-pill);
 }
 

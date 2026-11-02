@@ -30,6 +30,10 @@
   --c-primary-soft: #e8f0e6;
   --c-primary-line: #c2d6c4; /* 描边 */
 
+  /* ---- 徽章灰绿 (eyebrow / 题类 chip 底色) ---- */
+  --c-sage: #476b50; /* 白字对比 6.1:1 */
+  --c-sage-strong: #33503b; /* 深一档, 按下/hover */
+
   /* ---- 陈竹黄 (唯一暖色, 克制用于奖品/奖励) ---- */
   --c-accent: #8a6a2c; /* 白字对比 5.1:1 */
   --c-accent-soft: #f7f1e0;
