@@ -27,6 +27,9 @@ export type IconName =
   | 'film'
   | 'lightbulb'
   | 'video'
+  | 'info'
+  | 'pin'
+  | 'book'
   | 'panda'
   | 'bamboo'
 
@@ -160,6 +163,22 @@ const props = withDefaults(
     <template v-else-if="props.name === 'video'">
       <rect x="2.5" y="5.5" width="13" height="13" rx="3" />
       <path d="m15.5 10 5.5-3v10l-5.5-3" />
+    </template>
+
+    <template v-else-if="props.name === 'info'">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 11.2v4.6" />
+      <circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none" />
+    </template>
+
+    <template v-else-if="props.name === 'pin'">
+      <path d="M12 21s6.5-5.7 6.5-10.5A6.5 6.5 0 0 0 5.5 10.5C5.5 15.3 12 21 12 21Z" />
+      <circle cx="12" cy="10.5" r="2.3" />
+    </template>
+
+    <template v-else-if="props.name === 'book'">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z" />
+      <path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20" />
     </template>
 
     <!-- 熊猫头像: 竹纸白填充 + 墨黑描边, 扁平无渐变 -->
